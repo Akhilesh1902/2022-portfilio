@@ -11,9 +11,12 @@
 img {
   width: 100%;
 }
+
+body {
+  background-color: hsl(var(--color-primary));
+}
 .background {
   background-image: url("../../static/images/background.jpg");
-
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -55,6 +58,78 @@ img {
   text-transform: capitalize;
 }
 
+/* 
+//  work section
+*/
+
+.work-section {
+  --border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+.container {
+  width: 80%;
+}
+
+.container h1 {
+  font-family: var(--font-bebas-neue);
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  text-transform: capitalize;
+  color: hsl(var(--color-accent));
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: hsl(0, 0%, 0%);
+  margin: 1em 2em;
+  border-radius: var(--border-radius);
+}
+
+.card h2 {
+  color: hsl(var(--color-primary));
+  margin-left: 0.5rem;
+  padding: 0.2em;
+}
+
+.thumbnail {
+  display: block;
+  width: 200px;
+  aspect-ratio: 2/1;
+  /* background-color: aqua; */
+  background-size: cover;
+  border-radius: var(--border-radius);
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.card-1 {
+  background-image: url("../../static/images/background.jpg");
+  /* width: 100px; */
+}
+.card-2 {
+  background-image: url("../../static/images/background.jpg");
+  /* width: 100px; */
+}
+.card-3 {
+  background-image: url("../../static/images/background.jpg");
+  /* width: 100px; */
+}
+
 @media screen and (max-width: 2000px) {
   .hero-content h1 {
     /* color: blueviolet; */
@@ -62,6 +137,17 @@ img {
   }
   .hero-content p {
     font-size: 2rem;
+  }
+  .work-section {
+    width: 70%;
+    margin: auto;
+  }
+
+  .container h1 {
+    font-size: 4rem;
+  }
+  .card h2 {
+    font-size: 2em;
   }
 }
 
@@ -73,6 +159,17 @@ img {
   .hero-content p {
     font-size: 1.3rem;
   }
+
+  .work-section {
+    width: 80%;
+    margin: auto;
+  }
+  .container h1 {
+    font-size: 3rem;
+  }
+  .card h2 {
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -82,5 +179,12 @@ img {
   }
   .hero-content p {
     font-size: 1rem;
+  }
+  .work-section {
+    width: 90%;
+  }
+
+  .card h2 {
+    font-size: 1.1em;
   }
 }
