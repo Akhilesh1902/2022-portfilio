@@ -13,21 +13,30 @@ img {
 }
 
 body {
-  background-color: hsl(var(--color-primary));
+  background-color: rgb(83, 83, 83);
+}
+.bg {
+  background-image: url("../../static/images/background.jpg");
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  mix-blend-mode: overlay;
 }
 .background {
-  background-image: url("../../static/images/background.jpg");
   background-size: cover;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: -1;
 }
 .hero-content {
   /* width: 80%; */
   width: clamp(80%, 400px, 700px);
   width: min(80%, 700px);
+  z-index: 1;
 }
 
 .hero-content h1 {
@@ -62,14 +71,22 @@ body {
 //  work section
 */
 
-.work-section {
-  --border-radius: 5px;
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
 }
+
+.work-section,
+.contact {
+  --border-radius: 5px;
+  width: 100%;
+  margin-top: 1rem;
+  padding-bottom: 4rem;
+  /* border: 1px solid green; */
+  background-color: hsl(var(--color-primary));
+}
+
 .container {
   width: 80%;
 }
@@ -81,7 +98,7 @@ body {
   text-transform: capitalize;
   color: hsl(var(--color-accent));
   font-size: 3em;
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 
 .card-wrapper {
@@ -130,6 +147,62 @@ body {
   /* width: 100px; */
 }
 
+/*
+* contact section
+*/
+
+.contact {
+  background-color: hsl(var(--color-accent) / 0.8);
+  padding: 4rem;
+  margin-top: 0;
+}
+
+.contact .form {
+  width: 70%;
+  align-self: center;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fields {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.fields label {
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 0 0 4px black;
+  font-family: var(--font-roboto);
+}
+textarea {
+  resize: none;
+  height: 10ch;
+}
+.form-btn {
+  margin-top: 2rem;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  border: none;
+  background-color: hsl(var(--color-primary));
+  font-weight: 400;
+  letter-spacing: 1ch;
+  font-size: 1.3rem;
+  line-height: 1;
+  font-family: var(--font-bebas-neue);
+  border-radius: 5px;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+.form-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/*
+* media query
+*/
+
 @media screen and (max-width: 2000px) {
   .hero-content h1 {
     /* color: blueviolet; */
@@ -137,9 +210,11 @@ body {
   }
   .hero-content p {
     font-size: 2rem;
+    color: hsl(var(--color-primary) / 0.9);
+    text-shadow: 0 0 10px black;
   }
   .work-section {
-    width: 70%;
+    /* width: 70%; */
     margin: auto;
   }
 
@@ -148,6 +223,9 @@ body {
   }
   .card h2 {
     font-size: 2em;
+  }
+  .contact .container {
+    width: 50%;
   }
 }
 
@@ -161,7 +239,7 @@ body {
   }
 
   .work-section {
-    width: 80%;
+    /* width: 80%; */
     margin: auto;
   }
   .container h1 {
@@ -169,6 +247,12 @@ body {
   }
   .card h2 {
     font-size: 1.5em;
+  }
+  .contact .container {
+    width: 80%;
+  }
+  .contact .form {
+    width: 100%;
   }
 }
 
@@ -180,11 +264,21 @@ body {
   .hero-content p {
     font-size: 1rem;
   }
-  .work-section {
-    width: 90%;
-  }
 
   .card h2 {
     font-size: 1.1em;
+  }
+
+  .contact .container {
+    width: 100%;
+  }
+  .contact .form {
+    width: 100%;
+  }
+  .fields label {
+    font-size: 1rem;
+  }
+  .fields input {
+    width: 70%;
   }
 }

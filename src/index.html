@@ -9,6 +9,7 @@
 </head>
 <body>
 <div class="background">
+    <div class="bg"></div>
     <div class="hero-content">
         <h1>Take your project Online</h1>
         <p>We provide best Quality Web Services to encourage small scale business to have an online presence.</p>
@@ -19,25 +20,45 @@
         <p>scroll</p>
     </div>
 </div>
-<section class="work-section">
+<section class="work-section flex-center">
     <div class="container">
         <h1>my work</h1>
         <div class="card-wrapper">
             <div class="card">
                 <a href="#" class="thumbnail card-1"></a>
                 <h2 class="title">Card Title</h2>
-
             </div>
             <div class="card">
                 <a href="#" class="thumbnail card-2"></a>
                 <h2 class="title">Card Title</h2>
-
             </div>
             <div class="card">
                 <a href="#" class="thumbnail card-3"></a>
                 <h2 class="title">Card Title</h2>
-
             </div>
+        </div>
+    </div>
+</section>
+<section class="contact flex-center">
+    <div class="container flex-center">
+        <form class="form flex-center">
+            <div class="fields">
+                <label for="name">Name</label>
+                <input type="text" name="name"/>
+            </div>
+            <div class="fields">
+                <label for="email">E-mail</label>
+                <input type="text" name="email"/>
+            </div>
+            <div class="fields">
+                <label for="contact-field">Contact</label>
+                <input type="text" name="contact-field"/>
+            </div>
+            <div class="fields">
+                <label for="message">Message</label>
+                <textarea type="text" name="message">
+            </div>
+            <button class="form-btn" onclick="submit">submit</button>
         </div>
     </div>
 </section>
