@@ -2,7 +2,7 @@
   "name": "2022-portfolio",
   "version": "1.0.0",
   "description": "This is the new portfolio made with 3js implimentation.",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
@@ -19,11 +19,11 @@
     "url": "https://github.com/Akhilesh1902/2022-portfilio/issues"
   },
   "homepage": "https://github.com/Akhilesh1902/2022-portfilio#readme",
-  "devDependencies": {
-    "parcel": "^2.2.1"
-  },
   "dependencies": {
     "gsap": "^3.9.1",
     "three": "^0.136.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
