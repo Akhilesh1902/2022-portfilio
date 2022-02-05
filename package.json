@@ -2,7 +2,7 @@
   "name": "2022-portfolio",
   "version": "1.0.0",
   "description": "This is the new portfolio made with 3js implimentation.",
-  "main": "src/index.html",
+  "main": "src/index.js",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
