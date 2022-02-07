@@ -17,6 +17,7 @@ img {
 
 body {
   background-color: rgb(83, 83, 83);
+  overflow-x: hidden;
 }
 .bg {
   background-image: url("../../static/images/background.jpg");
@@ -154,15 +155,15 @@ body {
 }
 
 .card-1 {
-  background-image: url("../../static/images/background.jpg");
+  background-image: url("../../static/images/todo.png");
   /* width: 100px; */
 }
 .card-2 {
-  background-image: url("../../static/images/background.jpg");
+  background-image: url("../../static/images/pastry.png");
   /* width: 100px; */
 }
 .card-3 {
-  background-image: url("../../static/images/background.jpg");
+  background-image: url("../../static/images/ironman.png");
   /* width: 100px; */
 }
 

@@ -28,30 +28,32 @@
         <h1>my work</h1>
         <div class="card-wrapper">
             <div class="card">
-                <a href="#" class="thumbnail card-1"></a>
-                <h2 class="title">Card Title</h2>
+                <a href="https://akhilesh1902.github.io/todolist/" class="thumbnail card-1"></a>
+                <h2 class="title">Todo App</h2>
             </div>
             <div class="card">
-                <a href="#" class="thumbnail card-2"></a>
-                <h2 class="title">Card Title</h2>
+                <a href="http://kin-pastry.netlify.app/" class="thumbnail card-2"></a>
+                <h2 class="title">Shop Design</h2>
             </div>
             <div class="card">
-                <a href="#" class="thumbnail card-3"></a>
-                <h2 class="title">Card Title</h2>
+                <a href="https://iron-man-3js-demo.netlify.app/" class="thumbnail card-3"></a>
+                <h2 class="title">3js Demo</h2>
             </div>
         </div>
     </div>
 </section>
 <section class="contact flex-center">
     <div class="container flex-center">
-        <form class="form flex-center">
+        <form class="form flex-center" name="contact" method="POST" data-netlify="true"
+        data-netlify-honeypot="bot-field">
+        <input type="text" name="bot-fild" style="display: none;">
             <div class="fields">
                 <label for="name">Name</label>
                 <input type="text" name="name"/>
             </div>
             <div class="fields">
                 <label for="email">E-mail</label>
-                <input type="text" name="email"/>
+                <input type="email" name="email"/>
             </div>
             <div class="fields">
                 <label for="contact-field">Contact</label>
@@ -61,7 +63,7 @@
                 <label for="message">Message</label>
                 <textarea type="text" name="message">
             </div>
-            <button class="form-btn" onclick="submit">submit</button>
+            <button class="form-btn" type="submit">submit</button>
         </div>
     </div>
 </section>
